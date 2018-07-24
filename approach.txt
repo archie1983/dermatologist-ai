@@ -1,0 +1,11 @@
+My very first attempt will probably be to create a CNN (probably use a pre-trained Resnet50 or other network)
+and remove some of the final layers, then flatten the output so that it produces a large-ish vector (a few
+thousand nodes). Then store such a vector for each of the training images. Now we'd have a an array of features
+for each image. These features can be evaluated and selected for classification. SKlearn GrisearchCV algorithm
+should be able to choose the best features. And then we classify and see how accurate we are. So in essence
+the pre-trained CNN will just reduce the number of features (the pictures can be as large as 17MB each, so that's
+17 million pixels - features) to a few thousand by using already existing pre-trained filters. And then GridSearchCV
+could figure out which one of these new features are useful.
+
+Just an idea.
+
